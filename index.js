@@ -48,10 +48,10 @@ const questions = [
     )
     .then((answers) => {
       // Use user feedback for... whatever!!
-      	var user_text = "";
+    
       if (answers.text.length > 0 && answers.text.length < 4) {
           // 1-3 chars, currect answer
-          user_text = answers.text;
+         const userText = answers.text;
       } else {
           // 0 or 4+ chars, wrong answer
           console.log("Invalid user text, Please enter 1-3 Characters, no more and no less");
@@ -60,11 +60,11 @@ const questions = [
       console.log("User text: [" + user_text + "]");
 
      // .then((answer) => {
-      var user_text_color = 
-      answer.text.color
-     // {
+    const userTextColor = answers.textColor;
+      
+    const userShapeType = answers.logoShape;
        // user_text_color = white
-      //} else {
+      //
         //console.log("wrong answer, ");
         //return;
 
@@ -90,8 +90,8 @@ const questions = [
       //user shape
 
       if(user_shape_type === "Square" || user_shape_type === "square") {
-          user_shape = new Square();
-          console.log("User selected Square shape");
+       let   user_shape = 
+          user_shape = new Square(); console.log("User selected Square shape");
       }
       else if (user_shape_type === "Circle" || user_shape_type === "circle") {
           user_shape = new Circle();
@@ -131,15 +131,15 @@ const questions = [
 
     
    // .catch(error) => {
-      if (error.isTtyError) {
+     // if (error.isTtyError) {
         // Prompt couldn't be rendered in the current environment
-      } else {
+     // } else {
         // Something else went wrong
-      }
+     // }
     ;// Function to write data to file
-    function writeToFile(fileName, data) {
-        console.log("Writing [" + data + "] to file [" + fileName + "]")
-        filesystem.writeFile(fileName, data, function (err) {
+    function writeToFile(svg_file, data) {
+        console.log("Writing [" + data + "] to file [" + svg_file + "]")
+        filesystem.writeFile(svg_file, data, function (err) {
             if (err) {
                 return console.log(err);
             }
