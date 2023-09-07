@@ -57,33 +57,39 @@ const questions = [
           console.log("Invalid user text, Please enter 1-3 Characters, no more and no less");
           return;
       }
-      console.log("User text: [" + user_text + "]");})
+      console.log("User text: [" + user_text + "]");
 
-      var user_text_color = "";
-      if(answer.text.color, white){
-        user_text_color = white
-      } else {
-        console.log("wrong answer, ");
-        return;
+     // .then((answer) => {
+      var user_text_color = 
+      answer.text.color
+     // {
+       // user_text_color = white
+      //} else {
+        //console.log("wrong answer, ");
+        //return;
 
-        console.log("user text color;white")
-      }
-      
+        //console.log("user text color;white")
+      //}})
+
+      //.then ((naswer) => {
+
+      })
+
       
 
       //user font color
-      user_text_color = answers["text-color"];
-      console.log("User text color: [" + user_text_color + "]");
+      //user_text_color = answers["text-color"];
+     // console.log("User text color: [" + user_text_color + "]");
       //user shape color
-      user_shape_color = answers.logoshape;
-      console.log("User shape color: [" + user_shape_color + "]");
+      ////user_shape_color = answers.logoshape;
+      //console.log("User shape color: [" + user_shape_color + "]");
       //user shape type
-      user_shape_type = answers["pixel-image"];
-      console.log("User entered shape = [" + user_shape_type + "]");
+      //user_shape_type = answers["pixel-image"];
+      //console.log("User entered shape = [" + user_shape_type + "]");
 
       //user shape
-      let user_shape;
-      if (user_shape_type === "Square" || user_shape_type === "square") {
+
+      if(user_shape_type === "Square" || user_shape_type === "square") {
           user_shape = new Square();
           console.log("User selected Square shape");
       }
@@ -108,11 +114,11 @@ const questions = [
       console.log("Displaying shape:\n\n" + svgString);
       //document.getElementById("svg_image").innerHTML = svgString;
   
-      console.log("Shape generation complete!");
+     console.log("Shape generation complete!");
       console.log("Writing shape to file...");
       writeToFile(svg_file, svgString); 
   
-  init()
+  //init()
 
   
 
@@ -124,13 +130,13 @@ const questions = [
       
 
     
-    .catch((error) => {
+   // .catch(error) => {
       if (error.isTtyError) {
         // Prompt couldn't be rendered in the current environment
       } else {
         // Something else went wrong
       }
-    });// Function to write data to file
+    ;// Function to write data to file
     function writeToFile(fileName, data) {
         console.log("Writing [" + data + "] to file [" + fileName + "]")
         filesystem.writeFile(fileName, data, function (err) {
