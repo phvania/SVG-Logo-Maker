@@ -10,9 +10,14 @@
  - [Contribution](#Contribution)
  - [Testing](#Testing) 
 
- ## Demo:
+ ## Demo:https://drive.google.com/file/d/18xwIYQgrl0hXHl0f9fGb__moni4wRLts/view
 
  ## Screenshot:
+ ![Alt text](IMG-0549.jpg)
+
+
+ ![Alt text](IMG-0548.jpg)
+
 
  ## Description:
  Build  an SVG logo using command line with your choice of shape, color and any three charactors og your choice. this generated SVG logo you can save as a .svg file.for this color keywords you can use hexadecimal numbers too.## Acceptance Criteria
